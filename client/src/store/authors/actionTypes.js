@@ -1,0 +1,4 @@
+export const AUTHOR_ACTIONS = {
+	ADD_AUTHOR: 'ADD_AUTHOR',
+	SET_AUTHORS: 'SET_AUTHORS',
+};

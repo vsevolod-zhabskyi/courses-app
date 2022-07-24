@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Course about life",
+    "description": "Very interesting",
+    "creationDate": "9/3/2022",
+    "duration": 330,
+    "authors": [
+      "eedf781a-80c3-44e6-bb2a-48ade821e0b0",
+      "ff126467-74f7-4a44-b84e-2cd2f238fddf"
+    ],
+    "id": "779b16b8-8665-4777-849d-0bfa5afb6233"
+  },
+  {
+    "title": "Roar4",
+    "description": "dsfdsaffs",
+    "duration": 322,
+    "authors": [
+      "40b21bd5-cbae-4f33-b154-0252b1ae03a9"
+    ],
+    "id": "e1b74753-9f24-43dd-afb8-4a693eb38eab",
+    "creationDate": "01/08/2022"
+  },
+  {
+    "title": "rrr888",
+    "description": "rrr",
+    "duration": 222,
+    "authors": [
+      "072fe3fc-e751-4745-9af5-aa9eed0ea9ed"
+    ],
+    "id": "b974d3de-cef2-4ca1-a38e-5d9ef3c1c562",
+    "creationDate": "01/08/2022"
+  },
+  {
+    "title": "course2",
+    "description": "description lorems",
+    "creationDate": "01/08/2022",
+    "duration": 30,
+    "authors": [
+      "9b87e8b8-6ba5-40fc-a439-c4e30a373d36"
+    ],
+    "id": "c2c4f7d7-12ed-40d8-bb95-61efecaf6171"
+  }
+]

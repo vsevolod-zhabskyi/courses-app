@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Sobaka",
+    "email": "sobaka@email.com",
+    "password": "$2b$05$CS9YTTN3hCmbHWBIpcLosuWTmgqBuWFO7LGy9EqJOrQeQ4nbfQPRW",
+    "id": "5e554cb4-dfd7-45e1-871a-0a852aaa7dd7",
+    "role": "user"
+  },
+  {
+    "name": "Top Admin",
+    "email": "admin@email.com",
+    "password": "$2b$05$KWWprfE2KGZJ6x8CKZFCmejhBK4xBzm8Vc7BiKv06kcb/eCVl7N/a",
+    "id": "32ee6cc5-f4fa-4a3a-a61d-b4d98bed9f09",
+    "role": "admin"
+  },
+  {
+    "name": "Admin 2",
+    "email": "admin2@email.com",
+    "password": "$2b$05$W9iSPccy0G9U/gxDoep3Ee1.HZqcV1CgE81wgm1iocBe/PSfgtjMO",
+    "id": "4a54cdc1-54c5-409d-8701-b00eff52a708",
+    "role": "admin"
+  }
+]
