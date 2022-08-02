@@ -33,8 +33,6 @@ function Courses() {
 		Promise.all([CourseService.getAll(), AuthorService.getAll()]).then(
 			([courses, authors]) => {
 				dispatch(setCourses(courses));
-				//todo
-				// setSortedCourses(courses);
 				dispatch(setAuthors(authors));
 				setLoading(false);
 			}
