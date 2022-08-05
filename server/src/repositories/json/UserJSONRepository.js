@@ -36,10 +36,6 @@ class UserJSONRepository extends JSONRepository {
       return true;
     });
 
-    if (!user) {
-      throw ApiError.clientError(`No user found`);
-    }
-
     return user;
   }
 

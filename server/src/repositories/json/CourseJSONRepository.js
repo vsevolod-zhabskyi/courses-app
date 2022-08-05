@@ -15,13 +15,7 @@ class CourseJSONRepository extends JSONRepository {
   async getOneById(id) {
     const courses = await this.getAll();
 
-    const course = courses.find(course => course.id === id);
-
-    if (!course) {
-      throw ApiError.clientError(`No course with id ${id}`);
-    }
-
-    return course;
+    return courses.find(course => course.id === id);
   }
 
   async create(course) {

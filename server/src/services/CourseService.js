@@ -1,4 +1,6 @@
 const CourseJSONRepository = require('../repositories/json/CourseJSONRepository');
+const authorService = require('./AuthorService');
+const ApiError = require("../error/ApiError");
 
 class CourseService {
   repository;
@@ -16,12 +18,23 @@ class CourseService {
   }
 
   async create(course) {
+    for (let authorId of course.authors) {
+      try {
+        await authorService.getOneById(authorId);
+      } catch {
+        throw ApiError.clientError(`No author with id ${authorId}`);
+      }
+    }
+
+    delete course.id;
     course.creationDate = new Date().toLocaleDateString('en-GB');
 
     return await this.repository.create(course);
   }
 
   async update(id, course) {
+    delete course.id;
+
     return await this.repository.update(id, course);
   }
 

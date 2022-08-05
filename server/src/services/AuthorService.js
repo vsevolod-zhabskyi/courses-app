@@ -1,4 +1,5 @@
 const AuthorJSONRepository = require('../repositories/json/AuthorJSONRepository');
+const ApiError = require("../error/ApiError");
 
 class AuthorService {
   repository;
@@ -12,15 +13,23 @@ class AuthorService {
   }
 
   async getOneById(id) {
-    return await this.repository.getOneById(id);
+    const author =  await this.repository.getOneById(id);
+    if (!author) {
+      throw ApiError.clientError(`No author with id ${id}`)
+    }
+
+    return author;
   }
 
   async create(author) {
-    const candidate = await this.repository.find()
+    delete author.id;
+
     return await this.repository.create(author);
   }
 
   async update(id, author) {
+    delete author.id;
+
     return await this.repository.update(id, author);
   }
 

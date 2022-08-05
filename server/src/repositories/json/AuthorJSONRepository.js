@@ -15,13 +15,7 @@ class AuthorJSONRepository extends JSONRepository {
   async getOneById(id) {
     const authors = await this.getAll();
 
-    const author = authors.find(author => author.id === id);
-
-    if (!author) {
-      throw ApiError.clientError(`No author with id ${id}`);
-    }
-
-    return author;
+    return authors.find(author => author.id === id);
   }
 
   async create(author) {

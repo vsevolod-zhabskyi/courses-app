@@ -44,11 +44,16 @@ class AuthService {
 
   async login({email, password}) {
     const user = await this.repository.find({email});
+    if (!user) {
+      throw ApiError.clientError(`User not found`);
+    }
 
     let comparePassword = await bcrypt.compare(password, user.password);
     if (!comparePassword) {
       throw ApiError.clientError(`Wrong password!`);
     }
+
+    delete user.password;
 
     const token = generateJwt({
       id: user.id,
