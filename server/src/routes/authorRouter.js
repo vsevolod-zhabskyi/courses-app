@@ -1,7 +1,7 @@
 const express = require('express');
 
 const AuthorController = require('../controllers/AuthorController');
-const authorValidation = require('../validators/authorValidation');
+const authorValidation = require('../validations/authorValidation');
 
 const router = express();
 
