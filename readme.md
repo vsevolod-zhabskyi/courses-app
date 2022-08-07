@@ -35,7 +35,8 @@ Enter the following commands in the console:
 
 The server app is written on **Node.js** with **Express** framework. \
 \
-Data is stored in json for now. Planning to make it in MongoDB.
+Data is stored in MongoDB, but storage can be replaced by JSON
+easily due to implemented architecture.
 
 
  **The architecture** consists of:

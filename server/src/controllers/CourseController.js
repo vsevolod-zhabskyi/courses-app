@@ -1,5 +1,6 @@
 const courseService = require('../services/CourseService');
 const handleError = require('../error/handleError');
+const ApiError = require("../error/ApiError");
 
 class CourseController {
   static async getAll(req, res, next) {
@@ -46,6 +47,10 @@ class CourseController {
   static async update(req, res, next) {
     try {
       const {id} = req.params;
+
+      if (req.body.id && req.body.id !== id) {
+        ApiError.clientError(`ID in parameters and ID in body doesn't match`)
+      }
 
       const course = await courseService.update(id, req.body);
 

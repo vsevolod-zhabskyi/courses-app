@@ -33,7 +33,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/courses/779b16b8-8665-4777-849d-0bfa5afb6233",
+					"raw": "http://localhost:5000/api/courses/62efc344f70da9baa17468dc",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -42,7 +42,7 @@
 					"path": [
 						"api",
 						"courses",
-						"779b16b8-8665-4777-849d-0bfa5afb6233"
+						"62efc344f70da9baa17468dc"
 					]
 				}
 			},
@@ -55,7 +55,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"course2\",\r\n    \"description\": \"description lorems\",\r\n    \"creationDate\": \"9/3/2022\",\r\n    \"duration\": 30,\r\n    \"authors\": [\r\n        \"9b87e8b8-6ba5-40fc-a439-c4e30a373d36\"\r\n    ]\r\n}",
+					"raw": "{\r\n    \"title\": \"Course 1\",\r\n    \"description\": \"Description that makes this course pretty interesting\",\r\n    \"creationDate\": \"9/3/2022\",\r\n    \"duration\": 30,\r\n    \"authors\": [\r\n        \"62efbbf228db04f654b69d14\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,7 +85,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"course 555\",\r\n    \"description\": \"description double\",\r\n    \"creationDate\": \"9/3/2022\",\r\n    \"duration\": 30,\r\n    \"authors\": [\r\n        \"9b87e8b8-6ba5-40fc-a439-c4e30a373d36\"\r\n    ],\r\n    \"id\": \"f7406502-3bce-4d2f-8898-eae9db1c7bde\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Course 101\",\r\n    \"description\": \"Description lorem ipsum\",\r\n    \"creationDate\": \"9/3/2022\",\r\n    \"duration\": 30,\r\n    \"authors\": [\r\n        \"62efc71c85619a51cd3a3d58\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,7 +93,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/courses/c2c4f7d7-12ed-40d8-bb95-61efecaf6171",
+					"raw": "http://localhost:5000/api/courses/62efc344f70da9baa17468dc",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,7 +102,7 @@
 					"path": [
 						"api",
 						"courses",
-						"c2c4f7d7-12ed-40d8-bb95-61efecaf6171"
+						"62efc344f70da9baa17468dc"
 					]
 				}
 			},
@@ -130,7 +130,7 @@
 			"response": []
 		},
 		{
-			"name": "Auhtor Get All",
+			"name": "Author Get All",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -156,7 +156,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/authors/9b87e8b8-6ba5-40fc-a439-c4e30a373d36",
+					"raw": "http://localhost:5000/api/authors/62efbbf228db04f654b69d14",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -165,7 +165,7 @@
 					"path": [
 						"api",
 						"authors",
-						"9b87e8b8-6ba5-40fc-a439-c4e30a373d36"
+						"62efbbf228db04f654b69d14"
 					]
 				}
 			},
@@ -178,7 +178,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"author2X\"\r\n}",
+					"raw": "{\r\n    \"name\":\"Bilgelmo Delfini\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -208,7 +208,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"0d5b8d2a-7525-4907-8e75-bb2e5cec7fd4\",\r\n    \"name\":\"author3X\"\r\n}",
+					"raw": "{\r\n    \"name\":\"Andres Gandolfini\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -216,7 +216,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/authors/0d5b8d2a-7525-4907-8e75-bb2e5cec7fd4",
+					"raw": "http://localhost:5000/api/authors/62efbbf228db04f654b69d14",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -225,7 +225,7 @@
 					"path": [
 						"api",
 						"authors",
-						"0d5b8d2a-7525-4907-8e75-bb2e5cec7fd4"
+						"62efbbf228db04f654b69d14"
 					]
 				}
 			},
@@ -323,7 +323,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUzYmY1Nzk5LWExN2EtNDM0OC04YTc5LTA4YTZiZWQwNTA2MCIsImVtYWlsIjoidXNlckBlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY1OTczNTUxMywiZXhwIjoxNjU5ODIxOTEzfQ.16bXHi_ugdbrRVNbQ_4dFhDSsjNhwNGM3tiqBN3pYbY",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZiOTQyODBlOTkyZWZlMjg0Y2UyOSIsImVtYWlsIjoidXNlckBlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY1OTg3NzY5OCwiZXhwIjoxNjU5OTY0MDk4fQ.pA2X0O_BmFdXTcPvOvH3x6jtRNeDJhHv0h-4fKoYJ98",
 							"type": "string"
 						}
 					]

@@ -1,4 +1,4 @@
-const CourseJSONRepository = require('../repositories/json/CourseJSONRepository');
+const { CourseMongoDBRepository } = require('../repositories/mongoDB');
 const authorService = require('./AuthorService');
 const ApiError = require("../error/ApiError");
 
@@ -29,6 +29,11 @@ class CourseService {
   }
 
   async update(id, course) {
+    const authors = await authorService.getMultipleByIds(course.authors);
+    if (authors.length !== course.authors.length) {
+      throw ApiError.clientError('Some authors not found');
+    }
+
     return await this.repository.update(id, course);
   }
 
@@ -37,7 +42,7 @@ class CourseService {
   }
 }
 
-const courseRepository = new CourseJSONRepository();
+const courseRepository = new CourseMongoDBRepository();
 const courseService = new CourseService(courseRepository);
 
 module.exports = courseService;

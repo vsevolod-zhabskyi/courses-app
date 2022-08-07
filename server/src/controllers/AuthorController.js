@@ -1,5 +1,6 @@
 const authorService = require('../services/AuthorService');
 const handleError = require('../error/handleError');
+const ApiError = require("../error/ApiError");
 
 class AuthorController {
   static async getAll(req, res, next) {
@@ -46,6 +47,10 @@ class AuthorController {
   static async update(req, res, next) {
     try {
       const {id} = req.params;
+
+      if (req.body.id && req.body.id !== id) {
+        ApiError.clientError(`ID in parameters and ID in body doesn't match`)
+      }
 
       const author = await authorService.update(id, req.body);
 

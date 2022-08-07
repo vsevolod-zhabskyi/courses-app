@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const UserJSONRepository = require('../repositories/json/UserJSONRepository');
+const { UserMongoDBRepository } = require('../repositories/mongoDB');
 const bcrypt = require("bcrypt");
 const ApiError = require("../error/ApiError");
 
@@ -70,11 +70,14 @@ class AuthService {
   async check(token) {
     const {id} = jwt.verify(token, process.env.SECRET_KEY);
 
-    return await this.repository.getOneById(id);
+    const user =  await this.repository.getOneById(id);
+    delete user.password;
+
+    return user;
   }
 }
 
-const userRepository = new UserJSONRepository();
+const userRepository = new UserMongoDBRepository();
 const authService = new AuthService(userRepository);
 
 module.exports = authService;

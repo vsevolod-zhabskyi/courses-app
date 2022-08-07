@@ -1,4 +1,4 @@
-const AuthorJSONRepository = require('../repositories/json/AuthorJSONRepository');
+const { AuthorMongoDBRepository } = require('../repositories/mongoDB');
 const ApiError = require("../error/ApiError");
 
 class AuthorService {
@@ -38,7 +38,7 @@ class AuthorService {
   }
 }
 
-const authorRepository = new AuthorJSONRepository();
+const authorRepository = new AuthorMongoDBRepository();
 const authorService = new AuthorService(authorRepository);
 
 module.exports = authorService;
