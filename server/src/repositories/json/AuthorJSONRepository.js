@@ -18,6 +18,12 @@ class AuthorJSONRepository extends JSONRepository {
     return authors.find(author => author.id === id);
   }
 
+  async getMultipleByIds(ids) {
+    const authors = await this.getAll();
+
+    return authors.filter(author => ids.includes(author.id));
+  }
+
   async create(author) {
     let authors = await this.getAll();
 

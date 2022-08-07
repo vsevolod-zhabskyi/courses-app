@@ -21,15 +21,15 @@ class AuthorService {
     return author;
   }
 
-  async create(author) {
-    delete author.id;
+  async getMultipleByIds(ids) {
+    return await this.repository.getMultipleByIds(ids);
+  }
 
+  async create(author) {
     return await this.repository.create(author);
   }
 
   async update(id, author) {
-    delete author.id;
-
     return await this.repository.update(id, author);
   }
 

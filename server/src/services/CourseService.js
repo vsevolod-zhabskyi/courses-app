@@ -18,23 +18,17 @@ class CourseService {
   }
 
   async create(course) {
-    for (let authorId of course.authors) {
-      try {
-        await authorService.getOneById(authorId);
-      } catch {
-        throw ApiError.clientError(`No author with id ${authorId}`);
-      }
+    const authors = await authorService.getMultipleByIds(course.authors);
+    if (authors.length !== course.authors.length) {
+      throw ApiError.clientError('Some authors not found');
     }
 
-    delete course.id;
     course.creationDate = new Date().toLocaleDateString('en-GB');
 
     return await this.repository.create(course);
   }
 
   async update(id, course) {
-    delete course.id;
-
     return await this.repository.update(id, course);
   }
 
