@@ -35,8 +35,10 @@ Enter the following commands in the console:
 
 The server app is written on **Node.js** with **Express** framework. \
 \
-Data is stored in MongoDB, but storage can be replaced by JSON
-easily due to implemented architecture.
+Data is stored in **MongoDB**, but storage can be replaced by JSON
+easily due to implemented architecture.\
+\
+**Endpoints** provided in `api.postman_collection` file.
 
 
  **The architecture** consists of:
@@ -51,6 +53,7 @@ Repositories are meant to be injected in Service entity (**Dependency Injection*
 
 **Technologies**:
   - Express - used framework
+  - mongoose - ORM for MongoDB
   - JWT - authorization support
   - Joi - validation of request data
   - bcrypt - encryption / decryption of passwords
