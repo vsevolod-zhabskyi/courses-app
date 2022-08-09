@@ -7,7 +7,7 @@ export default class AuthorService {
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 
@@ -17,7 +17,7 @@ export default class AuthorService {
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 }

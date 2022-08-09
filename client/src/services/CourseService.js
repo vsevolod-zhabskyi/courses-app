@@ -7,7 +7,7 @@ export default class CourseService {
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 
@@ -23,7 +23,7 @@ export default class CourseService {
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 
@@ -33,19 +33,20 @@ export default class CourseService {
 
 			return id;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 
 	static async update(course) {
 		try {
+			const { id } = course;
 			delete course.id;
 
-			const { data } = await $authHost.put(`courses/${course.id}`, course);
+			const { data } = await $authHost.put(`courses/${id}`, course);
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 }

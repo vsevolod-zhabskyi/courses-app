@@ -2,8 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const router = require('./routes');
 const mongoose = require("mongoose");
-const logMiddleware = require('./middleware/log');
-const errorHandlingMiddleware = require('./middleware/errorHandling');
+const logMiddleware = require('./middleware/logMiddleware');
+const errorHandlingMiddleware = require('./middleware/errorHandlingMiddleware');
 const cors = require('cors')
 
 const app = express();

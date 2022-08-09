@@ -38,7 +38,7 @@ export default class AuthService {
 
 			return data.result;
 		} catch (e) {
-			console.log(e.response);
+			console.error(e.response);
 		}
 	}
 }

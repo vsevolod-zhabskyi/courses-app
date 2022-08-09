@@ -15,6 +15,7 @@ import CourseService from '../../services/CourseService';
 
 function CourseForm() {
 	const [course, setCourse] = useState({
+		id: null,
 		title: '',
 		description: '',
 		duration: '',
@@ -63,7 +64,6 @@ function CourseForm() {
 	};
 
 	const removeCourseAuthor = (id) => {
-		console.log(course.authors);
 		setCourse({
 			...course,
 			authors: course.authors.filter((author) => author !== id),
@@ -115,6 +115,7 @@ function CourseForm() {
 		if (isNaN(newValue)) {
 			return;
 		}
+
 		setCourse({
 			...course,
 			duration: Number(newValue),
