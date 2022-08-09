@@ -11,7 +11,6 @@ class UserMongoDBRepository {
 
   async find(options) {
     return await User.findOne(options);
-
   }
 }
 

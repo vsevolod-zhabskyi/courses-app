@@ -1,4 +1,5 @@
 const { AuthorMongoDBRepository } = require('../repositories/mongoDB');
+const courseService = require('../services/courseService');
 const ApiError = require("../error/ApiError");
 
 class AuthorService {
@@ -34,6 +35,11 @@ class AuthorService {
   }
 
   async delete(id) {
+    const courses = await courseService.findByAuthor(id);
+    if (courses.length) {
+      throw ApiError.clientError('Cannot delete author with courses')
+    }
+
     return await this.repository.delete(id);
   }
 }

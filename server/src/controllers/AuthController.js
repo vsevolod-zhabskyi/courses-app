@@ -18,7 +18,6 @@ class AuthController {
 
   static async register(req, res, next) {
     try {
-      console.log (req.body)
       const {token, user} = await AuthService.register(req.body);
 
       res.json({

@@ -17,6 +17,10 @@ class CourseService {
     return await this.repository.getOneById(id);
   }
 
+  async findByAuthor(authorId) {
+    return await this.repository.findByAuthor(authorId);
+  }
+
   async create(course) {
     const authors = await authorService.getMultipleByIds(course.authors);
     if (authors.length !== course.authors.length) {

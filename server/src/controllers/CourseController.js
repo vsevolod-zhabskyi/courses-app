@@ -33,8 +33,6 @@ class CourseController {
 
   static async create(req, res, next) {
     try {
-      console.log(req.headers);
-
       const course = await courseService.create(req.body);
 
       return res.json({

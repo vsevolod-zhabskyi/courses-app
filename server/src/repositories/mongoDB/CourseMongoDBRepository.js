@@ -9,6 +9,10 @@ class CourseMongoDBRepository {
     return await Course.findById(id);
   }
 
+  async findByAuthor(authorId) {
+    return await Course.find({authors: authorId });
+  }
+
   async create(course) {
     return await Course.create(course);
   }
@@ -18,7 +22,9 @@ class CourseMongoDBRepository {
   }
 
   async delete(id) {
-    return await Course.findByIdAndDelete(id);
+    await Course.findByIdAndDelete(id);
+
+    return true;
   }
 }
 

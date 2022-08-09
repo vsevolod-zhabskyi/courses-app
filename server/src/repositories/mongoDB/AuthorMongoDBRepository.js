@@ -22,7 +22,9 @@ class AuthorMongoDBRepository {
   }
 
   async delete(id) {
-    return await Author.findByIdAndDelete(id);
+    await Author.findByIdAndDelete(id);
+
+    return true;
   }
 }
 
