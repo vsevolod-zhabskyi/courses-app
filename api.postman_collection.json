@@ -81,6 +81,16 @@
 		{
 			"name": "Course Update",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZjN2IwODU2MTlhNTFjZDNhM2Q1ZCIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYwMDQwOTcxLCJleHAiOjE2NjAxMjczNzF9.71cY2CNCIP7fqYqYP_rQ99wiH2adKWSx048KxjWu7-A",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -111,10 +121,20 @@
 		{
 			"name": "Course Delete",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZjN2IwODU2MTlhNTFjZDNhM2Q1ZCIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYwMDQwOTcxLCJleHAiOjE2NjAxMjczNzF9.71cY2CNCIP7fqYqYP_rQ99wiH2adKWSx048KxjWu7-A",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/courses/c2c4f7d7-12ed-40d8-bb95-61efecaf6171",
+					"raw": "http://localhost:5000/api/courses/62f2373d1b0440f1d3ab4f5f",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,7 +143,7 @@
 					"path": [
 						"api",
 						"courses",
-						"c2c4f7d7-12ed-40d8-bb95-61efecaf6171"
+						"62f2373d1b0440f1d3ab4f5f"
 					]
 				}
 			},
@@ -174,11 +194,21 @@
 		{
 			"name": "Author Create",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZjN2IwODU2MTlhNTFjZDNhM2Q1ZCIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYwMDQwOTcxLCJleHAiOjE2NjAxMjczNzF9.71cY2CNCIP7fqYqYP_rQ99wiH2adKWSx048KxjWu7-A",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Bilgelmo Delfini\"\r\n}",
+					"raw": "{\r\n    \"name\":\"Sandra Bullock\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -204,6 +234,16 @@
 		{
 			"name": "Author Update",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZjN2IwODU2MTlhNTFjZDNhM2Q1ZCIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYwMDQwOTcxLCJleHAiOjE2NjAxMjczNzF9.71cY2CNCIP7fqYqYP_rQ99wiH2adKWSx048KxjWu7-A",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -234,10 +274,20 @@
 		{
 			"name": "Author Delete",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWZjN2IwODU2MTlhNTFjZDNhM2Q1ZCIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjYwMDQwOTcxLCJleHAiOjE2NjAxMjczNzF9.71cY2CNCIP7fqYqYP_rQ99wiH2adKWSx048KxjWu7-A",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/authors/0d5b8d2a-7525-4907-8e75-bb2e5cec7fd4",
+					"raw": "http://localhost:5000/api/authors/62f23c32a144c064eb0c990c",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -246,7 +296,7 @@
 					"path": [
 						"api",
 						"authors",
-						"0d5b8d2a-7525-4907-8e75-bb2e5cec7fd4"
+						"62f23c32a144c064eb0c990c"
 					]
 				}
 			},
@@ -259,7 +309,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"user@email.com\",\r\n    \"password\": \"user\"\r\n}",
+					"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -289,7 +339,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"user@email.com\",\r\n    \"password\": \"user\"\r\n}",
+					"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
